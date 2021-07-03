@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        <title>Exercício | Fixação 5</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="script.js" defer></script>
+    </head>
+    
+    <body>
+        
+        <label>Questões 1 à 5</label>
+        <form action="BuscarServlet" 
+              onsubmit="return validarTamanhoTexto('username', 1, 10)">
+            <input type="text" id="username" name="username" required />
+            <input type="submit" name="submitBTN" value="Validar" />
+        </form>
+        
+        <hr/>
+        
+        <label>Questão 6</label>
+        <form action="BuscarSerlvet">
+            <label for="opcoes">Escolha uma opção:</label>
+            <select name="opcoes" id="opcoes">
+              <option value="opcao1">Não escolha essa!!!</option>
+              <option value="opcao2">Opção 2</option>
+              <option value="opcao3">Opção 3</option>
+              <option value="opcao4">Opção 4</option>
+            </select>
+            <br/>
+            <input type="button" name="respostaBTN" value="Responder"
+                   onclick="checarOpcao('opcoes')" />
+        </form>
+        
+        <hr/>
+        
+        <label>Questão 7</label>
+        <form action="BuscarServlet">
+            <label for="box">Marque aqui </label>
+            <input type="checkbox" name="box" id="box" />
+            <input type="button" value="Checar caixa" onclick="checarBox()" />
+        </form>
+        
+        <hr/>
+        
+        <label>Questão 8</label>
+        <form action="BuscarServlet">
+            Opção 1 <input type="checkbox" name="box" id="box_1" /><br/>
+            Opção 2 <input type="checkbox" name="box" id="box_2" /><br/>
+            Opção 3 <input type="checkbox" name="box" id="box_3" /><br/>
+            Opção 4 <input type="checkbox" name="box" id="box_4" /><br/>
+            Opção 5 <input type="checkbox" name="box" id="box_5" /><br/>
+            <input type="button" value="Contar caixas marcadas" 
+                   onclick="contarBoxes('box')" />
+        </form>
+        
+        <hr/>
+        
+        <label>Questão 9</label>
+        <form action="BuscarServlet">
+            Opção 1 <input type="radio" name="radio" id="radio_1" /><br/>
+            Opção 2 <input type="radio" name="radio" id="radio_2" /><br/>
+            Opção 3 <input type="radio" name="radio" id="radio_3" /><br/>
+            Opção 4 <input type="radio" name="radio" id="radio_4" /><br/>
+            Opção 5 <input type="radio" name="radio" id="radio_5" /><br/>
+            <input type="button" value="Checar se marcou" 
+                   onclick="checarRadio('radio')" />
+        </form>
+        
+        <hr/>
+        
+        <br/> <a href="final.html">Ir para a Questão Final!</a>
+        
+    </body>
+    
+</html>
